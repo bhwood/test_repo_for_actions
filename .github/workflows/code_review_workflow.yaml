@@ -8,7 +8,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    if: "contains(github.event_name, 'push') && contains(github.event.head_commit.modified, '.py')"
+    if: if: "contains(github.event_name, 'push') && (contains(github.event.head_commit.modified, '.py') || contains(github.event.head_commit.added, '.py'))"
+
 
     steps:
       - name: Checkout code
@@ -32,7 +33,7 @@ jobs:
 
       - name: Run tests with coverage
         run: |
-          coverage run -m pytest tests/
+          coverage run -m pytest test/
           coverage report -m
 
       - name: Check code formatting
