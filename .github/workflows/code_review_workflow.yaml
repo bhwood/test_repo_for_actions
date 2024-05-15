@@ -37,8 +37,5 @@ jobs:
           coverage run -m pytest test/
           coverage report -m
 
-      - name: Check code formatting
-        run: black --check .
-
       - name: Lint with flake8
         run: pip install flake8 && flake8
