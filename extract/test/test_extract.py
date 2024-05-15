@@ -1,10 +1,8 @@
-import unittest
 import boto3
 import os
 import pytest
 from moto import mock_aws
 from src.extract import retrieve_timestamps
-
 
 
 @pytest.fixture(scope="class")
@@ -35,7 +33,10 @@ def test_successful_retrieval(ssm_client):
     )
 
     ssm_client.put_parameter(
-        Name="example_table", Value="2024-05-15T13:00:00", Type="String", Overwrite=True
+        Name="example_table",
+        Value="2024-05-15T13:00:00",
+        Type="String",
+        Overwrite=True,
     )
 
     timestamp = retrieve_timestamps("example_table")

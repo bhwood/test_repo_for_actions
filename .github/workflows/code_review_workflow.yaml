@@ -32,6 +32,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Check for changes in Python files (optional)
+        run: |
+          if git diff --name-only HEAD^ | grep -E '\.py$'; then
+            echo "Python files changed. Running tests..."
+          else
+            echo "No Python files changed. Skipping tests."
+            exit 0
+
       - name: Run tests with coverage
         run: |
           coverage run -m pytest test/
@@ -40,6 +48,5 @@ jobs:
       - name: Run Black
         run: black --line-length 79 .
 
-        
       - name: Lint with flake8
         run: pip install flake8 && flake8
