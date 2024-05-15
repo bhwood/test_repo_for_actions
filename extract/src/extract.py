@@ -1,7 +1,6 @@
 import boto3
 
 
-#
 def retrieve_timestamps(table_name):
     try:
         ssm_client = boto3.client("ssm")
