@@ -38,7 +38,7 @@ jobs:
           coverage report -m
 
       - name: Run Black
-        run: black .
+        run: black --line-length 79 .
 
       - name: Lint with flake8
         run: pip install flake8 && flake8
