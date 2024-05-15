@@ -25,7 +25,7 @@ def test_table_name_does_not_exist(ssm_client):
     with pytest.raises(KeyError):
         retrieve_timestamps("non_existent_table")
 
-
+#
 def test_successful_retrieval(ssm_client):
 
     ssm_client.put_parameter(

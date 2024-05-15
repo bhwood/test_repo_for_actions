@@ -12,7 +12,7 @@ def retrieve_timestamps(table_name):
 
     except ssm_client.exceptions.ParameterNotFound:
         raise KeyError(f"Table name '{table_name}' does not exist.")
-
+#
     # TODO connection errors should be checked when connecting with
     # credentials so this might not be needed here
     # except (ssm_client.exceptions.ConnectionError):
