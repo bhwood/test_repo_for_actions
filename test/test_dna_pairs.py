@@ -20,7 +20,7 @@ def test_invalid_input_string_returns_empty_list():
     assert result_2 == expected
     assert result_3 == expected
 
-#
+
 def test_valid_lower_case_input_single_character_string_returns_list_of_pairs():
     input_1 = "a"
     input_2 = "g"
