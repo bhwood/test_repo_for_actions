@@ -2,3 +2,5 @@ coverage
 pytest
 black
 flake8
+moto
+boto3
