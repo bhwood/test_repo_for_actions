@@ -4,7 +4,7 @@ from src.some import some is_even
 # args: list, predicate function
 # method: invoke predicate function once for each element in list
 # return: True if func returns Tur at least once else False 
-
+#
 def test_returns_true_or_false():
     input_1 = ([1,2,3] , is_even)
     result = some(*input_1)

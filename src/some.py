@@ -5,5 +5,8 @@ def is_even(num):
 def some(num_list, func):
     return any( [ func(i) for i in num_list ] )
 
+##
+
+
 
     
