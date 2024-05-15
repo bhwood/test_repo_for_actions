@@ -8,7 +8,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    if: if: "contains(github.event_name, 'push') && (contains(github.event.head_commit.modified, '.py') || contains(github.event.head_commit.added, '.py')"
+    if: "contains(github.event_name, 'push') && (contains(github.event.head_commit.modified, '.py') || contains(github.event.head_commit.added, '.py')"
 
 
     steps:
