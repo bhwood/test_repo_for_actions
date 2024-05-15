@@ -3,7 +3,8 @@ import boto3
 import os
 import pytest
 from moto import mock_aws
-from extract.src.extract import retrieve_timestamps
+from src.extract import retrieve_timestamps
+
 
 
 @pytest.fixture(scope="class")
